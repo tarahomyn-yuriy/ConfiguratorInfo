@@ -26,8 +26,8 @@ namespace WinFormsApp3
             Exception exception;
             string pathToConfa = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Confa.xml");
 
-            Конфа.Config.Kernel = new Kernel();
-            bool flagOpen = Конфа.Config.Kernel.Open(pathToConfa, "localhost", "postgres ", "1", 5432, "test", out exception);
+            Config.Kernel = new Kernel();
+            bool flagOpen = Config.Kernel.Open(pathToConfa, "localhost", "postgres ", "1", 5432, "test", out exception);
 
             if (!flagOpen)
             {
